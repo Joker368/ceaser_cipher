@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.describe CeaserCipher do
-  it "has a version number" do
-    expect(CeaserCipher::VERSION).not_to be nil
+  it "encodes phrase into cipher" do
+    expect(TheOdinProject::CeaserCipher.new(5, phrase: '321!Pizza123.').cipher).to eq('321!Kduuv123.')
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "decodes cipher into phrase" do
+    expect(TheOdinProject::CeaserCipher.new(5, cipher: '321!Kduuv123.').phrase).to eq('321!Pizza123.')
   end
 end
