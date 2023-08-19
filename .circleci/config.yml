@@ -11,5 +11,5 @@ jobs:
             gem install bundler -v 2.4.19
             bundle install
             bundle exec rake
-- store_test_results:
-    path: test-results
+      - store_test_results:
+          path: test-results
