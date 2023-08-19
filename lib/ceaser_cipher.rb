@@ -30,20 +30,20 @@ module TheOdinProject
       cipher = ''
       string.each_char do |char|
         is_uppercase = (char == char.upcase)
-        if letters.include?(char.downcase)
-          cipher += if is_uppercase
+        cipher += if letters.include?(char.downcase)
+                    if is_uppercase
                       letters[letters.find_index(char.downcase) - shift].upcase
                     else
                       letters[letters.find_index(char.downcase) - shift]
                     end
-        else
-          cipher += char
-        end
+                  else
+                    char
+                  end
       end
       cipher
     end
   end
 end
 
-#pp TheOdinProject::CeaserCipher.new(27, phrase: "Test!123") # cipher Uftu!123
-#pp TheOdinProject::CeaserCipher.new(27, cipher: 'Sdrs!123') # phrase Test!123
+# pp TheOdinProject::CeaserCipher.new(27, phrase: "Test!123") # cipher Uftu!123
+# pp TheOdinProject::CeaserCipher.new(27, cipher: 'Sdrs!123') # phrase Test!123
