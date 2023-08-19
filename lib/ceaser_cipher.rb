@@ -45,5 +45,5 @@ module TheOdinProject
   end
 end
 
-pp TheOdinProject::CeaserCipher.new(27, phrase: "Test!123") # cipher Uftu!123
-pp TheOdinProject::CeaserCipher.new(27, cipher: 'Sdrs!123') # phrase Test!123
+#pp TheOdinProject::CeaserCipher.new(27, phrase: "Test!123") # cipher Uftu!123
+#pp TheOdinProject::CeaserCipher.new(27, cipher: 'Sdrs!123') # phrase Test!123
